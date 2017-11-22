@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a94ae9c9c2c97019d65fed9a66042fc",
+    "content-hash": "eadb881c88a5593b5a50b98929cd63ef",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1062,6 +1062,53 @@
             ],
             "description": "HTTP cache handling for eZ Platform.",
             "time": "2017-11-17T10:55:28+00:00"
+        },
+        {
+            "name": "ezsystems/ezplatform-installer",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "/home/andrew/repos/ezsystems/ezplatform-installer",
+                "reference": "7d9f2dc5d95ef775a7f0158644504d2d40bd1a3d",
+                "shasum": null
+            },
+            "require": {
+                "ezsystems/ezpublish-kernel": "^7.0@dev",
+                "php": "^7.1",
+                "symfony/symfony": "^3.4@rc"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.7.1",
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "ezplatform-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "EzSystems\\EzPlatformInstallerBundle\\": "src/bundle",
+                    "EzSystems\\EzPlatformInstaller\\": "src/lib"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "EzSystems\\Tests\\EzPlatformInstallerBundle\\": "src/tests/bundle",
+                    "EzSystems\\Tests\\EzPlatformInstaller\\": "src/tests/lib"
+                }
+            },
+            "scripts": {
+                "fix-cs": [
+                    "@php ./vendor/bin/php-cs-fixer fix -v --show-progress=estimating"
+                ]
+            },
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "eZ Platform v2 Installer",
+            "homepage": "https://ezplatform.com/"
         },
         {
             "name": "ezsystems/ezplatform-solr-search-engine",
@@ -5833,7 +5880,8 @@
         "ezsystems/ezplatform-admin-ui": 10,
         "ezsystems/ezplatform-admin-ui-modules": 10,
         "ezsystems/ezplatform-http-cache": 5,
-        "roave/security-advisories": 20
+        "roave/security-advisories": 20,
+        "ezsystems/ezplatform-installer": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

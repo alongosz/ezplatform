@@ -49,7 +49,8 @@
         "roave/security-advisories": "dev-master",
         "oneup/flysystem-bundle": "^2.0",
         "friendsofsymfony/jsrouting-bundle": "^1.4",
-        "willdurand/js-translation-bundle": "^2.6"
+        "willdurand/js-translation-bundle": "^2.6",
+        "ezsystems/ezplatform-installer": "^0.1@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.1",
@@ -99,6 +100,12 @@
         },
         "branch-alias": {
             "dev-master": "2.0.x-dev"
+        }
+    },
+    "repositories": {
+        "localInstaler": {
+            "type": "path",
+            "url": "/home/andrew/repos/ezsystems/ezplatform-installer/"
         }
     }
 }
