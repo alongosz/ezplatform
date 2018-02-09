@@ -55,3 +55,6 @@ ezpublish:
                 default_ttl: '%httpcache_default_ttl%'
             http_cache:
                 purge_servers: ['%purge_server%']
+
+imports:
+    - { resource: custom_tags.yml }
