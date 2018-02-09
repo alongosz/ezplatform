@@ -35,12 +35,12 @@
         "doctrine/orm": "^2.5",
         "sensio/distribution-bundle": "^5.0.19",
         "incenteev/composer-parameter-handler": "~2.1",
-        "ezsystems/ezpublish-kernel": "^7.0@dev",
+        "ezsystems/ezpublish-kernel": "dev-ezp-28110-richtext-custom-tags as 7.1.x-dev",
         "ezsystems/repository-forms": "^2.0@dev",
         "ezsystems/ezplatform-solr-search-engine": "^1.5@dev",
         "ezsystems/ez-support-tools": "^0.2@dev",
         "ezsystems/ezplatform-http-cache": "^0.4@dev",
-        "ezsystems/ezplatform-admin-ui": "^1.0@dev",
+        "ezsystems/ezplatform-admin-ui": "dev-ezp-28110-richtext-custom-tags as 1.1.x-dev",
         "ezsystems/ezplatform-admin-ui-modules": "^1.0@dev",
         "ezsystems/ezplatform-admin-ui-assets": "^2.0@dev",
         "ezsystems/ezplatform-design-engine": "^1.1",
@@ -99,5 +99,16 @@
         "branch-alias": {
             "dev-master": "2.1.x-dev"
         }
+    },
+    "repositories": {
+        "kernel": {
+            "type": "vcs",
+            "url": "https://github.com/alongosz/ezpublish-kernel.git"
+        },
+        "admin": {
+            "type": "vcs",
+            "url": "https://github.com/alongosz/ezplatform-admin-ui.git"
+        }
     }
+
 }
