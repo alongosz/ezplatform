@@ -52,6 +52,7 @@
         "white-october/pagerfanta-bundle": "^1.2",
         "roave/security-advisories": "dev-master",
         "leafo/scssphp": "^0.7.6",
+        "netgen/tagsbundle": "^3.3",
         "symfony/thanks": "^1.0.7"
     },
     "require-dev": {
@@ -96,7 +97,7 @@
     "config": {
         "bin-dir": "bin",
         "preferred-install": {
-            "ezsystems/*": "dist"
+            "ezsystems/*": "source"
         }
     },
     "extra": {

@@ -38,3 +38,6 @@ platform1_admin_route:
     defaults:
         path: /admin
         permanent: true
+
+_eztagsRoutes:
+    resource: "@NetgenTagsBundle/Resources/config/routing.yml"
