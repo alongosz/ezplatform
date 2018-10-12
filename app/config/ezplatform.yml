@@ -27,6 +27,9 @@ ezpublish:
 
     # System settings, grouped by siteaccess and/or siteaccess group
     system:
+        default:
+            field_templates:
+                - { template: 'content_fields.html.twig', priority: 1 }
         site_group:
             # Cache pool service, needs to be different per repository (database) on multi repository install.
             cache_service_name: '%cache_pool%'
@@ -62,4 +65,4 @@ ezpublish:
 
 ez_platform_standard_design:
     # makes Kernel default templates (in EzPublishCoreBundle/Resources/views) part of standard Design
-    override_kernel_templates: true
+    override_kernel_templates: false
