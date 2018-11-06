@@ -1,0 +1,5 @@
+{% extends '@EzPublishCore/content_fields.html.twig' %}
+
+{% block ezrichtext_field %}
+    <textarea rows="15" cols="200">{{ field.value.xml.saveXML()|escape }}</textarea>
+{% endblock %}
