@@ -38,9 +38,9 @@
         "ezsystems/ezplatform-richtext": "^1.1@dev",
         "ezsystems/ezplatform-solr-search-engine": "^1.5.4@dev",
         "ezsystems/ezplatform-standard-design": "^0.1@dev",
-        "ezsystems/ezpublish-kernel": "^7.5@dev",
+        "ezsystems/ezpublish-kernel": "dev-ezp-29938-install-schema-using-doctrine as 7.5.x-dev",
         "ezsystems/repository-forms": "^2.5@dev",
-        "ezsystems/doctrine-dbal-schema": "^0.1@dev",
+        "ezsystems/doctrine-dbal-schema": "dev-ezp-30057-schema-export-import as 0.1.x-dev",
         "ezsystems/ezplatform-user": "^1.0@dev",
         "friendsofsymfony/jsrouting-bundle": "^1.6.3",
         "incenteev/composer-parameter-handler": "^2.1.3",
@@ -124,5 +124,15 @@
         "branch-alias": {
             "dev-master": "2.5.x-dev"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/alongosz/doctrine-dbal-schema.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/alongosz/ezpublish-kernel.git"
+        }
+    ]
 }
