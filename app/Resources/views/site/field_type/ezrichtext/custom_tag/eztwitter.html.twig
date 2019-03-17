@@ -1,41 +1,44 @@
-<script>window.twttr = (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
+<script>
+    if (!window.twttr) {
+        window.twttr = (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
 
-        t._e = [];
-        t.ready = function(f) {
-            t._e.push(f);
-        };
+            t._e = [];
+            t.ready = function (f) {
+                t._e.push(f);
+            };
 
-        return t;
-    }(document, "script", "twitter-wjs"));
+            return t;
+        }(document, "script", "twitter-wjs"));
 
-    const tweetUrl = '{{ params.tweet_url }}';
-    const tweetUrlParts = tweetUrl.split('/');
-    const tweetId = tweetUrlParts[tweetUrlParts.length - 1];
+        const tweetUrl = '{{ params.tweet_url }}';
+        const tweetUrlParts = tweetUrl.split('/');
+        const tweetId = tweetUrlParts[tweetUrlParts.length - 1];
 
-    twttr.ready(function () {
-        window.twttr.widgets.load(
-            twttr.widgets.createTweet(
-                tweetId,
-                document.querySelector('.tweet-container[data-url="{{ params.tweet_url }}"]'),
-                {
-                    'cards': '{{ params.cards is defined ? params.cards : '' }}',
-                    'conversation': '{{ params.conversation is defined ? params.conversation : '' }}',
-                    'theme': '{{ params.theme is defined ? params.theme : '' }}',
-                    'linkColor': '{{ params.link_color is defined ? params.link_color : '' }}',
-                    'width': '{{ params.width is defined ? params.width : '' }}',
-                    'align': '{{ params.align is defined ? params.align : '' }}',
-                    'lang': '{{ params.lang is defined ? params.lang : '' }}',
-                    'dnt': '{{ params.dnt is defined ? params.dnt : '' }}'
-                }
-            )
-        );
-    });
+        twttr.ready(function () {
+            window.twttr.widgets.load(
+                twttr.widgets.createTweet(
+                    tweetId,
+                    document.querySelector('.tweet-container[data-url="{{ params.tweet_url }}"]'),
+                    {
+                        'cards': '{{ params.cards is defined ? params.cards : '' }}',
+                        'conversation': '{{ params.conversation is defined ? params.conversation : '' }}',
+                        'theme': '{{ params.theme is defined ? params.theme : '' }}',
+                        'linkColor': '{{ params.link_color is defined ? params.link_color : '' }}',
+                        'width': '{{ params.width is defined ? params.width : '' }}',
+                        'align': '{{ params.align is defined ? params.align : '' }}',
+                        'lang': '{{ params.lang is defined ? params.lang : '' }}',
+                        'dnt': '{{ params.dnt is defined ? params.dnt : '' }}'
+                    }
+                )
+            );
+        });
+    }
 </script>
 <div class="tweet-container{{ css_class is defined ? ' ' ~ css_class : '' }}" data-url="{{ params.tweet_url }}"></div>
