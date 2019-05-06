@@ -55,6 +55,8 @@ class AppKernel extends Kernel
             new Overblog\GraphQLBundle\OverblogGraphQLBundle(),
             // Application
             new AppBundle\AppBundle(),
+            new Sites\Site1Bundle\Site1Bundle(),
+            new Sites\Site2Bundle\Site2Bundle(),
         ];
 
         switch ($this->getEnvironment()) {
