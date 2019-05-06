@@ -13,15 +13,15 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [site, admin]
+        list: [site1, site2, admin]
         groups:
-            site_group: [site]
+            site_group: [site1, site2]
 
             # WARNING: Do not remove or rename this group.
             # It's used to distinguish common siteaccesses from admin ones.
             # In case of multisite with multiple admin panels, remember to add any additional admin siteaccess to this group.
             admin_group: [admin]
-        default_siteaccess: site
+        default_siteaccess: site1
         match:
             URIElement: 1
 
@@ -45,8 +45,10 @@ ezpublish:
                 purge_servers: ['%purge_server%']
                 varnish_invalidate_token: '%varnish_invalidate_token%'
 
-        #site_group:
-        #    design: main
+        site1:
+            design: site1
+        site2:
+            design: site2
 
         admin_group:
             # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
@@ -67,6 +69,11 @@ ezpublish:
     url_alias:
         slug_converter:
             transformation: 'urlalias_lowercase'
+
+ezdesign:
+    design_list:
+        site1: [site1, standard]
+        site2: [site2, standard]
 
 ez_platform_standard_design:
     # makes Kernel default templates (in EzPublishCoreBundle/Resources/views) part of standard Design
