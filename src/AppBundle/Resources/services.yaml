@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    AppBundle\FieldType\Nameable\Date:
+        tags:
+            - { name: ezpublish.fieldType.nameable, alias: ezdate }
