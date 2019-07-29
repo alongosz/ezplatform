@@ -1,0 +1,46 @@
+ezpublish:
+    system:
+        default:
+            image_variations:
+                article_full_width:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [970, 600] }
+
+                search_result_item:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleexact, params: [125, 125]}
+
+                search_result_item_large:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleexact, params: [505, 400]}
+
+                product_large:
+                    reference: null
+                    filters:
+                        - {name: geometry/scalewidth, params: [665]}
+
+                product_card:
+                    reference: null
+                    filters:
+                        - {name: geometry/scalewidth, params: [281]}
+                        - {name: geometry/crop, params: [281, 181, 0, 0]}
+
+                embed-header:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleheight, params: [500]}
+                        - {name: geometry/crop, params: [1100, 500, 650, 0]}
+
+                place:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [420, 370] }
+                        - { name: geometry/crop, params: [420, 270, 0, 0] }
+
+                card_view:
+                    reference: null
+                    filters:
+                        - {name: geometry/scalewidth, params: [450]}

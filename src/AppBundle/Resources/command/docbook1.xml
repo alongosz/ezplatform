@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml"
+         xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom"
+         version="5.0-variant ezpublish-1.0">
+  <title ezxhtml:level="1">Custom Templates</title>
+  <eztemplate name="style3" type="style">
+    <ezcontent>Lorem
+      <eztemplateinline name="style1" type="style">
+        <ezcontent>ipsum dolor</ezcontent>
+      </eztemplateinline>
+      sit amet
+    </ezcontent>
+  </eztemplate>
+  <eztemplate name="style4" type="style">
+    <ezcontent>Nullam
+      vestibullum est
+    </ezcontent>
+  </eztemplate>
+  <eztemplate name="factbox" ezxhtml:class="ez-custom-tag ez-custom-tag--attributes-visible">
+    <ezcontent>
+      <para>
+        <literallayout class="normal">Break
+          line
+        </literallayout>
+      </para>
+      <para> </para>
+      <eztemplate name="factbox" ezxhtml:class="ez-custom-tag ez-custom-tag--attributes-visible">
+        <ezcontent>
+          <para>
+            <literallayout class="normal">Break
+              Line2
+            </literallayout>
+          </para>
+        </ezcontent>
+        <ezconfig>
+          <ezvalue key="title">Factbox2</ezvalue>
+        </ezconfig>
+      </eztemplate>
+    </ezcontent>
+    <ezconfig>
+      <ezvalue key="title">Fact</ezvalue>
+    </ezconfig>
+  </eztemplate>
+</section>

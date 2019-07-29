@@ -1,0 +1,96 @@
+ezpublish:
+    system:
+        admin_group:
+            fieldtypes:
+                ezrichtext:
+                    custom_tags: [ezyoutube, eztwitter, ezfacebook, factbox, call_to_action]
+                    custom_styles: [style1, style2, style3, style4]
+
+    ezrichtext:
+        # Define Custom Tags
+        custom_tags:
+            ezyoutube:
+                template: '@ezdesign/fields/ezrichtext/custom_tags/ezyoutube.html.twig'
+                icon: '/bundles/ezplatformadminui/img/ez-icons.svg#video'
+                attributes:
+                    video_url:
+                        type: 'string'
+                        required: true
+                    autoplay:
+                        type: 'boolean'
+                        default_value: false
+
+            eztwitter:
+                template: '@ezdesign/fields/ezrichtext/custom_tags/eztwitter.html.twig'
+                icon: '/bundles/ezplatformadminui/img/ez-icons.svg#twitter'
+                attributes:
+                    tweet_url:
+                        type: 'string'
+                        required: true
+                    # see https://dev.twitter.com/web/embedded-tweets/parameters
+                    cards:
+                        type: 'choice'
+                        required: false
+                        default_value: ''
+                        choices: ['', 'hidden']
+                    conversation:
+                        type: 'choice'
+                        default_value: ''
+                        choices: ['', 'none']
+                    theme:
+                        type: 'choice'
+                        default_value: 'light'
+                        required: true
+                        choices: ['light', 'dark']
+                    link_color:
+                        type: 'string'
+                        default_value: ''
+                    width:
+                        type: 'number'
+                        default_value: 500
+                    lang:
+                        type: 'string'
+                        default_value: 'en'
+                    dnt:
+                        type: 'boolean'
+                        default_value: true
+
+            ezfacebook:
+                template: '@ezdesign/fields/ezrichtext/custom_tags/ezfacebook.html.twig'
+                icon: '/assets/images/custom_tags/admin/icons/ezfacebook.svg#facebook'
+                attributes:
+                    post_url:
+                        type: 'string'
+                        required: true
+                    width:
+                        type: 'number'
+
+            factbox:
+                template: '@ezdesign/fields/ezrichtext/custom_tags/factbox.html.twig'
+                icon: '/bundles/ezplatformadminui/img/ez-icons.svg#about'
+                attributes:
+                    title:
+                        type: 'string'
+
+            call_to_action:
+                template: '@ezdesign/fields/ezrichtext/custom_tags/call_to_action.html.twig'
+                icon: '/bundles/ezplatformadminui/img/ez-icons.svg#button'
+                attributes:
+                    style:
+                        type: 'choice'
+                        default_value: 'primary'
+                        required: true
+                        choices: ['primary', 'secondary']
+        custom_styles:
+            style1:
+                template: '@ezdesign/fields/ezrichtext/custom_styles/style1.html.twig'
+                inline: true
+            style2:
+                template: '@ezdesign/fields/ezrichtext/custom_styles/style2.html.twig'
+                inline: true
+            style3:
+                template: '@ezdesign/fields/ezrichtext/custom_styles/style3.html.twig'
+                inline: false
+            style4:
+                template: '@ezdesign/fields/ezrichtext/custom_styles/style4.html.twig'
+                inline: false

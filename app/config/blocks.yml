@@ -1,0 +1,80 @@
+ezplatform_page_fieldtype:
+    blocks:
+        hero:
+            name: Hero
+            category: default
+            thumbnail: '/assets/images/page_builder/blocks/hero.svg#hero'
+            configuration_template: '@EzPlatformPageBuilder/page_builder/block/config/embed.html.twig'
+            attributes:
+                text:
+                    name: Text
+                    type: text
+                    validators:
+                        not_blank:
+                            message: You must provide a text
+                        regexp:
+                            options:
+                                pattern: '/[^\\s]/'
+                            message: Only valid HTML code is allowed
+                contentId:
+                    name: Image
+                    type: embed
+                    validators:
+                        not_blank:
+                            message: You must provide value
+                        regexp:
+                            options:
+                                pattern: '/[0-9]+/'
+                            message: Choose a Content item
+
+        places:
+            name: Places
+            category: default
+            thumbnail: '/bundles/ezplatformadminui/img/ez-icons.svg#places'
+            attributes:
+                contentId:
+                    type: embed
+                    name: Parent
+                    validators:
+                        not_blank:
+                            message: You must provide value
+                        regexp:
+                            options:
+                                pattern: '/[0-9]+/'
+                            message: Choose a container with Content items of the type Places
+                limit:
+                    type: 'integer'
+                    name: Limit
+                    validators:
+                        not_blank:
+                            message: You must provide value
+                        regexp:
+                            options:
+                                pattern: '/^[1-9][0-9]*$/'
+                            message: Limit must be a number greater than 0
+
+        tastes:
+            name: Tastes
+            category: default
+            thumbnail: '/assets/images/page_builder/blocks/tastes.svg#tastes'
+            attributes:
+                contentId:
+                    type: 'embed'
+                    name: Parent
+                    validators:
+                        not_blank:
+                            message: You must provide value
+                        regexp:
+                            options:
+                                pattern: '/[0-9]+/'
+                            message: Choose a container with Content items of the type Article
+                limit:
+                    type: 'integer'
+                    name: Limit
+                    validators:
+                        not_blank:
+                            message: You must provide value
+                        regexp:
+                            options:
+                                pattern: '/^[1-9][0-9]*$/'
+                            message: Limit must be a number greater than 0
