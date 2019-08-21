@@ -1,0 +1,2 @@
+ez_platform_standard_design:
+    override_kernel_templates: true
