@@ -32,6 +32,7 @@ class AppKernel extends Kernel
             // eZ Systems
             new EzSystems\PlatformHttpCacheBundle\EzSystemsPlatformHttpCacheBundle(),
             new eZ\Bundle\EzPublishCoreBundle\EzPublishCoreBundle(),
+            new EzSystems\EzPlatformCoreBundle\EzPlatformCoreBundle(),
             new eZ\Bundle\EzPublishLegacySearchEngineBundle\EzPublishLegacySearchEngineBundle(),
             new eZ\Bundle\EzPublishIOBundle\EzPublishIOBundle(),
             new eZ\Bundle\EzPublishRestBundle\EzPublishRestBundle(),
