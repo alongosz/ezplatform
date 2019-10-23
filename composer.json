@@ -10,6 +10,10 @@
             "homepage": "https://github.com/ezsystems/ezplatform/contributors"
         }
     ],
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/alongosz/ezplatform-richtext.git" },
+        { "type": "vcs", "url": "https://github.com/alongosz/ezplatform-admin-ui.git" }
+    ],
     "replace": {
         "ezsystems/ezpublish-community": "*"
     },
@@ -29,7 +33,7 @@
         "doctrine/orm": "^2.6.3",
         "ezsystems/doctrine-dbal-schema": "^0.1@dev",
         "ezsystems/ez-support-tools": "^1.0@dev",
-        "ezsystems/ezplatform-admin-ui": "^1.5@dev",
+        "ezsystems/ezplatform-admin-ui": "dev-ezp-31052-custom-tag-link-attr-type as 1.5.x-dev",
         "ezsystems/ezplatform-admin-ui-assets": "^4.1.0",
         "ezsystems/ezplatform-admin-ui-modules": "^1.5@dev",
         "ezsystems/ezplatform-core": "^1.0@dev",
@@ -38,7 +42,7 @@
         "ezsystems/ezplatform-graphql": "^1.0@dev",
         "ezsystems/ezplatform-http-cache": "^0.9@dev",
         "ezsystems/ezplatform-matrix-fieldtype": "^1.0@dev",
-        "ezsystems/ezplatform-richtext": "^1.1@dev",
+        "ezsystems/ezplatform-richtext": "dev-ezp-30933-custom-tag-link-attribute as 1.1.x-dev",
         "ezsystems/ezplatform-solr-search-engine": "^1.6@dev",
         "ezsystems/ezplatform-standard-design": "^0.2@dev",
         "ezsystems/ezplatform-user": "^1.0@dev",
