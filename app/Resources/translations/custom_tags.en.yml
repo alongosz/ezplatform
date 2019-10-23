@@ -1,0 +1,5 @@
+ezrichtext.custom_tags.vcustom.label: 'VCustom'
+ezrichtext.custom_tags.vcustom.attributes.attrTitle.label: 'Title'
+ezrichtext.custom_tags.vcustom.attributes.attrDesc.label: 'Description'
+ezrichtext.custom_tags.vcustom.attributes.attrColor.label: 'Color'
+ezrichtext.custom_tags.vcustom.attributes.attrUrl.label: 'URL'

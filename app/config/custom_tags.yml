@@ -1,0 +1,26 @@
+ezpublish:
+    system:
+        admin_group:
+            fieldtypes:
+                ezrichtext:
+                    custom_tags: [vcustom]
+
+ezrichtext:
+    custom_tags:
+        vcustom:
+            template: '@ezdesign/custom_tags/vcustom.html.twig'
+            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#custom_tags'
+            attributes:
+                attrTitle:
+                    type: string
+                    required: false
+                attrDesc:
+                    type: string
+                    required: false
+                attrColor:
+                    type: choice
+                    required: false
+                    choices: [Red, Blue, Green]
+                attrUrl:
+                    type: link
+                    required: false
