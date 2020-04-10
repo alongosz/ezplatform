@@ -1,0 +1,9 @@
+<h1>{{ ez_content_name(content) }}</h1>
+
+{% for item in items %}
+    <h2><a href={{ path('ez_urlalias', {'contentId': item.contentInfo.id}) }}>{{ ez_content_name(item.contentInfo) }}</a></h2>
+{% endfor %}
+
+{% if isPaginationEnabled %}
+    {{ pagerfanta( items, 'ez', {'routeName': location, 'pageParameter': pageParameter } ) }}
+{% endif %}

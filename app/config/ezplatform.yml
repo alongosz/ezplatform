@@ -65,6 +65,18 @@ ezpublish:
                 media: /1/43/
 
         site:
+            content_view:
+                full:
+                    location_children_t:
+                        match:
+                            Identifier\ContentType: location_children_t
+                        template: content_query/full.html.twig
+                content_query_field:
+                    location_children_t:
+                        match:
+                            Identifier\ContentType: location_children_t
+                            Identifier\FieldDefinition: children
+                        template: content_query/children.html.twig
             languages: [eng-GB]
 
     url_alias:
