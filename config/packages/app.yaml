@@ -1,0 +1,9 @@
+ezplatform:
+    system:
+        default:
+            content_view:
+                full:
+                    article:
+                        controller: App\Controller\DefaultController::showSiteAccessNameAction
+                        match:
+                            Identifier\ContentType: [folder]
