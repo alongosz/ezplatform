@@ -1,0 +1,4 @@
+services:
+    App\Controller\ReportController:
+        parent: App\Controller\Controller
+        tags: ['container.service_subscriber']

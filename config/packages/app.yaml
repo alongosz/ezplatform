@@ -4,6 +4,6 @@ ezplatform:
             content_view:
                 full:
                     article:
-                        controller: App\Controller\DefaultController::showSiteAccessNameAction
+                        controller: App\Controller\ReportController::showRootLocationPathStringAction
                         match:
                             Identifier\ContentType: [folder]
