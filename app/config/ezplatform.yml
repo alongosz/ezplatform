@@ -13,9 +13,9 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [site, admin]
+        list: [site, fr, de, admin]
         groups:
-            site_group: [site]
+            site_group: [site, fr, de]
 
             # WARNING: Do not remove or rename this group.
             # It's used to distinguish common siteaccesses from admin ones.
@@ -53,7 +53,7 @@ ezpublish:
             # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
             # all eng-GB data to other locales first.
             # For admin this needs to contain all languages you want to translate content to on the given repository.
-            languages: [eng-GB]
+            languages: [eng-GB, fre-FR, ger-DE]
             content_tree_module:
                 contextual_tree_root_location_ids:
                     - 2 # Home (Content structure)
@@ -66,6 +66,11 @@ ezpublish:
 
         site:
             languages: [eng-GB]
+
+        fr:
+            languages: [fre-FR]
+        de:
+            languages: [ger-DE]
 
     url_alias:
         slug_converter:
